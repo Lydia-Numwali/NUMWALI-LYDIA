@@ -17,19 +17,18 @@
         User Management Application
 
     </nav>
+    <div class="container">
     <?php
     if(isset($_GET['msg'])){
         $msg=$_GET['msg'];
-        echo '<div id="liveAlertPlaceholder"></div>
-        <button type="button" class="btn btn-primary" id="liveAlertBtn">Show live alert</button>'
-    }
+        echo '<div class="alert alert-warning alert-dismissible fade show" role="alert"> '.$msg.'<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';}
     ?>
+    </div>
       <div class="container">
         <a href="add_new.php" class="btn btn-dark mb-3">Add New</a>
         <table class="table table-hover text-center">
   <thead class="table-dark">
     <tr>
-      <th scope="col">ID</th>
       <th scope="col">First Name</th>
       <th scope="col">Last Name</th>
       <th scope="col">Email</th>
